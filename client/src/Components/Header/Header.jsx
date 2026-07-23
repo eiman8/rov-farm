@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
 
@@ -10,8 +11,19 @@ const Header = () => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
         <a href="/" className="logo">
           <img src="./ROV1.png" alt="R.O. Valerio Dairy Farm Logo" />
