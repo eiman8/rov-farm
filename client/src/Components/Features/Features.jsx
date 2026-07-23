@@ -28,7 +28,7 @@ const Features = () => {
             <div className="feature-icon">
               <Beef size={34} />
             </div>
-            <h3>Healthy Livestock</h3>
+            <h4>Healthy Livestock</h4>
             <p>
               Our cattle and goats are raised with proper nutrition, clean
               facilities, and attentive care to ensure their health and
@@ -41,7 +41,7 @@ const Features = () => {
               <Milk size={34} />
             </div>
 
-            <h3>Fresh Dairy Products</h3>
+            <h4>Fresh Dairy Products</h4>
             <p>
               We produce fresh, high-quality dairy products using clean,
               responsible farming practices and a commitment to quality.
@@ -53,7 +53,7 @@ const Features = () => {
               <Leaf size={34} />
             </div>
 
-            <h3>Sustainable Farming</h3>
+            <h4>Sustainable Farming</h4>
             <p>
               We embrace sustainable farming practices that care for our
               animals, protect the environment, and support future generations.

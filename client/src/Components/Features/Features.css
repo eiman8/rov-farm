@@ -143,13 +143,16 @@
   border: 1px solid rgba(46, 125, 50, 0.08);
 }
 
-.feature-card h3 {
+.feature-card h4 {
   margin-bottom: 0.75rem;
+  color: var(--primary-dark);
+  text-align: center;
 }
 
 .feature-card p {
-  color: #666;
-  line-height: 1.7;
+  /* color: #666; */
+  color: var(--primary-dark);
+  line-height: 1.6;
 }
 
 @media (max-width: 992px) {
