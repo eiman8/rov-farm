@@ -1,0 +1,190 @@
+/* ===========================
+   ABOUT
+=========================== */
+
+.about {
+  /* background: #fdfff5; */
+  background-color: #fff;
+  padding: 8rem 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+/* ===========================
+   LEFT
+=========================== */
+
+.about-content {
+  max-width: 560px;
+}
+
+.about-content h2 {
+  margin: 1rem 0 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.about-content h2 span {
+  color: var(--primary);
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.8;
+  max-width: 54ch;
+}
+
+/* ===========================
+   SHOWCASE
+=========================== */
+
+.about-showcase {
+  background: white;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  min-height: 600px;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.about-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.about-image img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.05);
+
+  transition:
+    opacity 0.8s ease,
+    transform 4s linear;
+}
+
+.about-image img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===========================
+   STORY
+=========================== */
+
+.about-story {
+  padding: 2rem;
+
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.story-content {
+  flex: 1;
+}
+
+.about-story h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+
+  min-height: 2.8rem;
+}
+
+.about-story p {
+  color: #666;
+  line-height: 1.8;
+  min-height: 90px;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   INDICATORS
+=========================== */
+
+.image-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+
+  margin-top: auto;
+}
+
+.image-indicators span {
+  width: 32px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: #ddd;
+
+  transition: all 0.35s ease;
+}
+
+.image-indicators span.active {
+  width: 72px;
+  background: var(--primary);
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.about-link:hover {
+  letter-spacing: 0.5px;
+}
+
+.image-indicators span {
+  cursor: pointer;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-showcase {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 0;
+  }
+
+  .about-story {
+    padding: 1.5rem;
+  }
+}
